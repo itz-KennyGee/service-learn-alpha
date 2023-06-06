@@ -1140,6 +1140,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7458823372295104945, guid: 3a20a7885c9447649b75aea72dd80dcc, type: 3}
   m_PrefabInstance: {fileID: 188328095}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &200093342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: e3ae06a3979f53046aa05330d69de1fa, type: 3}
+  m_PrefabInstance: {fileID: 1225614472}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &202127606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,9 +1154,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 202127607}
-  m_Layer: 0
+  - component: {fileID: 202127608}
+  m_Layer: 9
   m_Name: PaintSpill
-  m_TagString: Untagged
+  m_TagString: Spillage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1173,6 +1179,28 @@ Transform:
   m_Father: {fileID: 626601488}
   m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &202127608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202127606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ca3955b47048b4dbb99a6c9bee6137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    NPC_Name: Manager Ken
+    Title: Spillage
+    sentences:
+    - Looks like you've found a hazard, a liquid spillage.
+    - Standard practice would be to place a Caution Wet Floor sign before anything
+      else.
+    - If only this game's developer could afford that Asset pack on the store...
+    - Anyway, wouldn't want anyone slipping on this...
+    - Let's clean this up shall we?
 --- !u!1001 &210785979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1904,6 +1932,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spillage
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5beb0c4008669ba49863184756b51e43, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5beb0c4008669ba49863184756b51e43, type: 3}
 --- !u!4 &331694235 stripped
@@ -1928,7 +1960,7 @@ GameObject:
   - component: {fileID: 338726553}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4003,6 +4035,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8076555687274847598, guid: 062a7d9d65a93ef498417a8e0d1f3fa4, type: 3}
   m_PrefabInstance: {fileID: 1459955376}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &700496622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 700496624}
+  - component: {fileID: 700496623}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &700496623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700496622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2c5f5a9a7e3594591565ae5d2391ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1391061759}
+  NPC: {fileID: 979397016}
+  dialogueText: {fileID: 2056753219}
+--- !u!4 &700496624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700496622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &705379034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4622,7 +4701,7 @@ GameObject:
   - component: {fileID: 852182343}
   - component: {fileID: 852182342}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4668,7 +4747,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next >
+  m_text: Enter>>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4695,13 +4774,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -5176,9 +5255,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: paint_1G_bucket_low (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7458823372294616465, guid: 3a20a7885c9447649b75aea72dd80dcc, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7458823372294616467, guid: 3a20a7885c9447649b75aea72dd80dcc, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7458823372295104945, guid: 3a20a7885c9447649b75aea72dd80dcc, type: 3}
       propertyPath: m_RootOrder
@@ -5488,7 +5571,7 @@ GameObject:
   - component: {fileID: 979397016}
   m_Layer: 5
   m_Name: NPCName
-  m_TagString: Untagged
+  m_TagString: NPCname
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8445,6 +8528,7 @@ GameObject:
   - component: {fileID: 1391061756}
   - component: {fileID: 1391061758}
   - component: {fileID: 1391061757}
+  - component: {fileID: 1391061759}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -8513,6 +8597,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391061755}
   m_CullTransparentMesh: 1
+--- !u!95 &1391061759
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391061755}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 83e085237bf39ba4bb0928e0392eb119, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!4 &1399146438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8076555687274847598, guid: 062a7d9d65a93ef498417a8e0d1f3fa4, type: 3}
@@ -10731,8 +10835,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 164.36203, y: -54.874374}
-  m_SizeDelta: {x: -328.7241, y: -109.7487}
+  m_AnchoredPosition: {x: 169.10294, y: -56.059586}
+  m_SizeDelta: {x: -338.2059, y: -112.1191}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1761475907
 MonoBehaviour:
@@ -11002,6 +11106,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e3ae06a3979f53046aa05330d69de1fa, type: 3}
   m_PrefabInstance: {fileID: 1225614472}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1811222425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200093342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ca3955b47048b4dbb99a6c9bee6137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    NPC_Name: Manager Kennedy
+    Title: Lights Out
+    sentences:
+    - Lights, Camera, Action!
+    - Actually I mean...TAKE ACTION!
+    - Not only is leaving electricals on a waste of energy (blessed be the Earth)...
+    - It actually has the potential to start a fire, making it a hazard!
+    - Customers just love making extra work for us ;)
+    - Go ahead and turn this off.
 --- !u!1 &1819879287
 GameObject:
   m_ObjectHideFlags: 0
@@ -12708,7 +12834,7 @@ GameObject:
   - component: {fileID: 2056753219}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: DialogueText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
