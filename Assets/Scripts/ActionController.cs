@@ -24,6 +24,11 @@ public class ActionController : MonoBehaviour
         {
             myAnimator.SetTrigger("PressGrab");
         }
+
+        if (Input.GetKeyDown("x"))
+        {
+            myAnimator.SetTrigger("PressDrop");
+        }
     }
 
 }

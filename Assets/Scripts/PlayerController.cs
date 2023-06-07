@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 DIRECTION = Vector3.zero;
 
     private CharacterController controller;
+    private bool canQuit = false;
 
     [Header("Gravity Variables")]
     [SerializeField] private float gravity;
@@ -37,6 +38,8 @@ public class PlayerController : MonoBehaviour
 
         RunHandler();
         MoveHandler();
+
+        QuitHandler();
     }
 
     private void GetReferences()
@@ -92,5 +95,19 @@ public class PlayerController : MonoBehaviour
         {
             MOVESPEED = WALKSPEED;
         }
+    }
+
+    private void QuitHandler()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && canQuit)
+        {
+            Debug.Log("Quitting Training");
+            Application.Quit();
+        }
+    }
+
+    public void CompletedTraining()
+    {
+        canQuit = true;
     }
 }
