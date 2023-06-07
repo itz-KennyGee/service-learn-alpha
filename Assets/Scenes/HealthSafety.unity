@@ -3447,6 +3447,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ec739259ec61f5d4ba3ed6d34fd802a6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3ae06a3979f53046aa05330d69de1fa, type: 3}
+--- !u!1 &623696836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: e3ae06a3979f53046aa05330d69de1fa, type: 3}
+  m_PrefabInstance: {fileID: 623696835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &626601487
 GameObject:
   m_ObjectHideFlags: 0
@@ -9871,33 +9876,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28a7de13a6369f846bf6d64963e8fa43, type: 3}
---- !u!1 &1635143169 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: e3ae06a3979f53046aa05330d69de1fa, type: 3}
-  m_PrefabInstance: {fileID: 614057792}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1635143170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635143169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48ca3955b47048b4dbb99a6c9bee6137, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    NPC_Name: Manager Kennedy
-    Title: Lights Out
-    sentences:
-    - Lights, Camera, Action!
-    - Actually I mean...TAKE ACTION!
-    - Not only is leaving electricals on a waste of energy (blessed be the Earth)...
-    - 'It actually has the potential to cause an accident, making it a hazard! '
-    - Customers just love making extra work for us ;)
-    - Go ahead and turn this off.
 --- !u!1001 &1641606551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11164,6 +11142,7 @@ GameObject:
   - component: {fileID: 1819879290}
   - component: {fileID: 1819879289}
   - component: {fileID: 1819879288}
+  - component: {fileID: 1819879292}
   m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
@@ -11250,6 +11229,32 @@ Transform:
   m_Father: {fileID: 807878443}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1819879292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819879287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ca3955b47048b4dbb99a6c9bee6137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    NPC_Name: Manager Ken
+    Title: Welcome
+    sentences:
+    - Hey there, new hire.
+    - We will now begin your health and safety training.
+    - In this scene, we're going to go over identifying and responding to workplace
+      hazards.
+    - A hazard is a source or situation with the potential to harm someone.
+    - 'Navigate the workplace and see if you can find some of the hazards present.
+
+'
+    - You should be able to move around with W (Forward), S (Back), A (Left) or D
+      (Right).
 --- !u!1 &1821479654
 GameObject:
   m_ObjectHideFlags: 0
@@ -13374,6 +13379,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e3ae06a3979f53046aa05330d69de1fa, type: 3}
   m_PrefabInstance: {fileID: 623696835}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2120743337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623696836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ca3955b47048b4dbb99a6c9bee6137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    NPC_Name: Manager Kennedy
+    Title: Lights Out
+    sentences:
+    - Lights, Camera, Action!
+    - Actually I mean...TAKE ACTION!
+    - Not only is leaving electricals on a waste of energy (blessed be the Earth)...
+    - 'It actually has the potential to cause an accident, making it a hazard! '
+    - Customers just love making extra work for us ;)
+    - Go ahead and turn this off.
 --- !u!4 &2129613812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a65804b782e378e46a402e06983b7be4, type: 3}
