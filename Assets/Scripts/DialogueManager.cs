@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
+    private GameObject objInteracted;
     public Animator animator;
     public TMP_Text NPC;
     public TMP_Text dialogueText;
@@ -25,8 +26,9 @@ public class DialogueManager : MonoBehaviour
             NextSentence();
         }
     }
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, GameObject obj)
     {
+        objInteracted = obj;
         animator.SetBool("Open", true);
         GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
         name = dialogue.NPC_Name;
@@ -42,7 +44,7 @@ public class DialogueManager : MonoBehaviour
     public void NextSentence()
     {
         if (sentences.Count== 0) { 
-            EndDialogue();
+            EndDialogue(objInteracted);
             return;
         }
 
@@ -61,11 +63,12 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void EndDialogue()
+    void EndDialogue(GameObject obj)
     {
-        Debug.Log("End of conversation");
+        Debug.Log("End of conversation with " + this.gameObject);
         animator.SetBool("Open", false);
         GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
-
+        GameObject.Destroy(obj);
+        Debug.Log("Destroyed " + obj.name);
     }
 }

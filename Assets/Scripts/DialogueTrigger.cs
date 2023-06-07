@@ -7,12 +7,13 @@ public class DialogueTrigger : MonoBehaviour
     private GameObject Player;
     public Dialogue dialogue;
     private bool hasTriggered = false;
-    LayerMask mask;
     private float range = 2.5f;
 
-    public void TriggerDialogue()
+    public void TriggerDialogue(GameObject o)
     {
-        FindAnyObjectByType<DialogueManager>().StartDialogue(dialogue);
+        //Debug.Log(o.gameObject.name);
+        FindAnyObjectByType<DialogueManager>().StartDialogue(dialogue, o);
+        //GameObject.Destroy(this.gameObject);
     }
 
     private void Start()
@@ -25,7 +26,7 @@ public class DialogueTrigger : MonoBehaviour
         if (Vector3.Distance(Player.transform.position, this.transform.position) <= range && !hasTriggered)
         {
             Debug.Log("In range of " + this.gameObject.name);
-            TriggerDialogue();
+            TriggerDialogue(this.gameObject);
             hasTriggered = true;
         } 
 
