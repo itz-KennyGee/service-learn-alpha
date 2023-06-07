@@ -15,7 +15,7 @@ public class HazardTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (hazards.Length > 0) { }
+        if (hazards.Length > 0) { }
 
         FindAnyObjectByType<DialogueManager>().StartDialogue(dialogue, this.gameObject);
 
